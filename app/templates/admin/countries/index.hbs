@@ -1,0 +1,30 @@
+<h1>Admin/countries#index</h1>
+
+{{#link-to "admin.countries.new"}}Create{{/link-to}}
+
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Code</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each model as |country| }}
+    <tr>
+      <td>{{country.id}}</td>
+      <td>{{country.title}}</td>
+      <td>{{country.code}}</td>
+      <td>
+        <button type="button" class="btn" {{action 'redirectToShowCountry' country}}>Show</button>
+        <button type="button" class="btn" {{action 'redirectToEditCountry' country}} >Edit</button>
+        <button type="button" class="btn btn-danger" {{action 'deleteCountry' country}}>Delete</button>
+
+      </td>
+    </tr>
+  {{/each}}
+
+  </tbody>
+</table>

@@ -1,0 +1,65 @@
+<!-- app/templates/components/library-item-form.hbs -->
+<div class="form-horizontal">
+  <div class="form-group has-feedback {{if item.isValidName 'has-success'}}">
+    <label class="col-sm-2 control-label">Name*</label>
+    <div class="col-sm-10">
+      {{input type="text" value=item.name class="form-control" placeholder="The name of the contact"}}
+      {{#if item.isValidName}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+    </div>
+  </div>
+  <div class="form-group has-feedback {{if item.isValidSurname 'has-success'}}">
+    <label class="col-sm-2 control-label">Surname*</label>
+    <div class="col-sm-10">
+      {{input type="text" value=item.surname class="form-control" placeholder="The surname of the contact"}}
+      {{#if item.isValidSurname}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+    </div>
+  </div>
+  <div class="form-group has-feedback {{if item.isValidPhone 'has-success'}}">
+    <label class="col-sm-2 control-label">Phone*</label>
+    <div class="col-sm-10">
+      {{input type="text" value=item.phone class="form-control" placeholder="The phone of the contact"}}
+      {{#if item.isValidPhone}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+    </div>
+  </div>
+  <div class="form-group has-feedback {{if item.isValidEmail 'has-success'}}">
+    <label class="col-sm-2 control-label">Email*</label>
+    <div class="col-sm-10">
+      {{input type="text" value=item.email class="form-control" placeholder="The email of the contact"}}
+      {{#if item.isValidEmail}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+    </div>
+  </div>
+  <div class="form-group has-feedback {{if item.isValidWeb 'has-success'}}">
+    <label class="col-sm-2 control-label">Web*</label>
+    <div class="col-sm-10">
+      {{input type="text" value=item.web class="form-control" placeholder="The web of the contact"}}
+      {{#if item.isValidWeb}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+    </div>
+  </div>
+  <div class="form-group has-feedback {{if item.isValidCity 'has-success'}}">
+    <label class="col-sm-2 control-label">City*</label>
+    <div class="col-sm-10">
+      {{input type="text" value=item.city class="form-control" placeholder="The city of the contact"}}
+      {{#if item.isValidCity}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+    </div>
+  </div>
+  <div class="form-group has-feedback {{if item.isValidAddress 'has-success'}}">
+    <label class="col-sm-2 control-label">Address*</label>
+    <div class="col-sm-10">
+      {{input type="text" value=item.address class="form-control" placeholder="The address of the contact"}}
+      {{#if item.isValidAddress}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+    </div>
+  </div>
+  <div class="form-group has-feedback {{if item.isValidCountry 'has-success'}}">
+    <label class="col-sm-2 control-label">Country*</label>
+    <div class="col-sm-10">
+      {{input type="text" value=item.country.title class="form-control" placeholder="The country of the contact"}}
+      {{#if item.isValidCountry}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" {{action 'buttonClicked' item}} disabled={{unless item.isValid true}}>{{buttonLabel}}</button>
+    </div>
+  </div>
+</div>

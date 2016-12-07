@@ -1,0 +1,39 @@
+<h1>Contacts</h1>
+
+{{#link-to "contacts.new"}}Create{{/link-to}}
+
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Phone</th>
+    <th>E-mail</th>
+    <th>Web</th>
+    <th>City</th>
+    <th>Address</th>
+    <th>Country</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each model as |contact| }}
+    <tr>
+      <td></td>
+      <td>{{contact.name}}</td>
+      <td>{{contact.surname}}</td>
+      <td>{{contact.phone}}</td>
+      <td>{{contact.email}}</td>
+      <td>{{contact.phone}}</td>
+      <td>{{contact.city}}</td>
+      <td>{{contact.address}}</td>
+      <td>{{contact.country.title}}</td>
+      <td>
+        <button type="button" class="btn btn-danger" {{action 'deleteContact' contact}}>Delete</button>
+      </td>
+    </tr>
+  {{/each}}
+
+  </tbody>
+</table>

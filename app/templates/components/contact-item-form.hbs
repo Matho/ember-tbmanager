@@ -1,3 +1,60 @@
+<div id="validationErrorWrapper">
+  <div class="validationErrors">
+    {{#unless item.isValid}}
+      <h3>Formulár obsahuje tieto chyby:</h3>
+    {{/unless}}
+
+
+    {{#unless item.isValidName}}
+      <div >
+        Meno musí obsahovať aspoň 2 znaky
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidSurname}}
+      <div >
+        Priezvisko musí obsahovať aspoň 2 znaky
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidPhone}}
+      <div >
+        Telefón musí byť vyplnený
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidEmail}}
+      <div >
+        Email musí byť v správnom tvare
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidWeb}}
+      <div >
+        Web musí byť vyplnený
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidCity}}
+      <div >
+        Mesto musí byť vyplnené
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidAddress}}
+      <div >
+        Adresa musí byť vyplnená
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidCountry}}
+      <div >
+        Krajina musí byť zvolená
+      </div>
+    {{/unless}}
+  </div>
+</div>
+
 <!-- app/templates/components/library-item-form.hbs -->
 <div class="form-horizontal">
   <div class="form-group has-feedback {{if item.isValidName 'has-success'}}">
@@ -49,6 +106,15 @@
       {{#if item.isValidAddress}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
     </div>
   </div>
+
+  <select name="country">
+    {{#each countries as |country|}}
+      <option value="{{country.id}}"  >{{country.title}}</option>
+    {{/each}}
+  </select>
+
+
+
   <div class="form-group has-feedback {{if item.isValidCountry 'has-success'}}">
     <label class="col-sm-2 control-label">Country*</label>
     <div class="col-sm-10">

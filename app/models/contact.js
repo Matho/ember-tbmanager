@@ -12,10 +12,14 @@ export default DS.Model.extend({
 
   country: DS.belongsTo('country'),
 
-  isValidName: Ember.computed.notEmpty('name'),
-  isValidSurname: Ember.computed.notEmpty('surname'),
+  isValidName: Ember.computed('name', function() {
+    return this.get('name')  && this.get('name').length >= 2;
+  }),
+  isValidSurname: Ember.computed('surname', function() {
+    return this.get('surname')  && this.get('surname').length >= 2;
+  }),
   isValidPhone: Ember.computed.notEmpty('phone'),
-  isValidEmail: Ember.computed.notEmpty('email'),
+  isValidEmail: Ember.computed.match('email', /^.+@.+\..+$/),
   isValidWeb: Ember.computed.notEmpty('web'),
   isValidCity: Ember.computed.notEmpty('city'),
   isValidAddress: Ember.computed.notEmpty('address'),

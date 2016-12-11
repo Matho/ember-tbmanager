@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a8e3ac60-4c5e-4816-a4aa-80139654aba9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/contact.js" afterPath="$PROJECT_DIR$/app/models/contact.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/country.js" afterPath="$PROJECT_DIR$/app/models/country.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/admin/countries/index.js" afterPath="$PROJECT_DIR$/app/routes/admin/countries/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/contacts/edit.js" afterPath="$PROJECT_DIR$/app/routes/contacts/edit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/contacts/index.js" afterPath="$PROJECT_DIR$/app/routes/contacts/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/contacts/new.js" afterPath="$PROJECT_DIR$/app/routes/contacts/new.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/contacts/show.js" afterPath="$PROJECT_DIR$/app/routes/contacts/show.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/components/matho-selectbox.hbs" afterPath="$PROJECT_DIR$/app/templates/components/matho-selectbox.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/contacts/index.hbs" afterPath="$PROJECT_DIR$/app/templates/contacts/index.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/contacts/show.hbs" afterPath="$PROJECT_DIR$/app/templates/contacts/show.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,31 +29,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="contact.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/contact.js">
+      <file leaf-file-name="edit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes/contacts/edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="157" lean-forward="false" selection-start-line="26" selection-start-column="157" selection-end-line="26" selection-end-column="157" />
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matho-selectbox.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/components/matho-selectbox.hbs">
+      <file leaf-file-name="show.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes/contacts/show.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/routes/contacts/new.js">
+      <file leaf-file-name="show.hbs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/contacts/show.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="495">
+              <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -109,7 +106,6 @@
         <option value="$PROJECT_DIR$/app/router.js" />
         <option value="$PROJECT_DIR$/app/templates/components/countries-item-form.hbs" />
         <option value="$PROJECT_DIR$/app/routes/admin/countries/new.js" />
-        <option value="$PROJECT_DIR$/app/routes/admin/countries/index.js" />
         <option value="$PROJECT_DIR$/app/routes/admin/countries/edit.js" />
         <option value="$PROJECT_DIR$/app/templates/admin/countries/show.hbs" />
         <option value="$PROJECT_DIR$/app/routes/admin/countries/show.js" />
@@ -124,16 +120,17 @@
         <option value="$PROJECT_DIR$/app/components/contact-item-form.js" />
         <option value="$PROJECT_DIR$/app/components/matho-selectbox.js" />
         <option value="$PROJECT_DIR$/app/templates/components/contact-item-form.hbs" />
-        <option value="$PROJECT_DIR$/app/routes/contacts/index.js" />
-        <option value="$PROJECT_DIR$/app/routes/contacts/edit.js" />
         <option value="$PROJECT_DIR$/app/models/country.js" />
-        <option value="$PROJECT_DIR$/app/templates/contacts/show.hbs" />
         <option value="$PROJECT_DIR$/app/serializers/application.js" />
-        <option value="$PROJECT_DIR$/app/routes/contacts/show.js" />
         <option value="$PROJECT_DIR$/app/templates/contacts/index.hbs" />
         <option value="$PROJECT_DIR$/app/models/contact.js" />
-        <option value="$PROJECT_DIR$/app/templates/components/matho-selectbox.hbs" />
         <option value="$PROJECT_DIR$/app/routes/contacts/new.js" />
+        <option value="$PROJECT_DIR$/app/templates/components/matho-selectbox.hbs" />
+        <option value="$PROJECT_DIR$/app/routes/contacts/edit.js" />
+        <option value="$PROJECT_DIR$/app/routes/contacts/index.js" />
+        <option value="$PROJECT_DIR$/app/routes/admin/countries/index.js" />
+        <option value="$PROJECT_DIR$/app/routes/contacts/show.js" />
+        <option value="$PROJECT_DIR$/app/templates/contacts/show.hbs" />
       </list>
     </option>
   </component>
@@ -284,7 +281,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="contacts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,12 +421,12 @@
       <option name="presentableId" value="Default" />
       <updated>1481117954715</updated>
       <workItem from="1481117955897" duration="21681000" />
-      <workItem from="1481454921143" duration="11767000" />
+      <workItem from="1481454921143" duration="13151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33448000" />
+    <option name="totallyTimeSpent" value="34832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -626,14 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/matho-selectbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/countries/index.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -682,14 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/contacts/form.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="136" lean-forward="false" selection-start-line="4" selection-start-column="115" selection-end-line="4" selection-end-column="136" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/contact-item-form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -706,14 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/admin/countries/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="3" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="25" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/admin/countries/show.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -726,22 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="36" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/contacts/edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/contacts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -778,34 +735,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/contacts/show.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/contacts/show.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/contacts/index.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
           <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/matho-selectbox.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -818,10 +751,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/matho-selectbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/components/matho-selectbox.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="68" lean-forward="false" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/admin/countries/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="58" lean-forward="false" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/contacts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/contacts/new.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="330">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/contacts/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/contacts/show.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/contacts/form.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/contacts/show.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
           <folding />
         </state>
       </provider>

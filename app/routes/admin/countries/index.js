@@ -9,11 +9,11 @@ export default Ember.Route.extend({
   actions: {
 
     redirectToEditCountry(country){
-      this.transitionTo('admin.countries.edit', country);
+      this.transitionTo('admin.countries.edit', country.id);
     },
 
     redirectToShowCountry(country){
-      this.transitionTo('admin.countries.show', country);
+      this.transitionTo('admin.countries.show', country.id);
     },
 
     deleteCountry(country) {

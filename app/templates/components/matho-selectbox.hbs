@@ -1,6 +1,6 @@
 <select name="item_value" class="form-control" onchange={{action "selectCountry" value="target.value"  }}>
   <option value="">-- vyberte --</option>
   {{#each item_values as |item_value|}}
-    <option value="{{item_value.id}}"  selected={{eq item.country item_value.id}} >{{item_value.title}}</option>
+    <option value="{{item_value.id}}"  selected={{eq item.country.id item_value.id}} >{{item_value.title}}</option>
   {{/each}}
 </select>

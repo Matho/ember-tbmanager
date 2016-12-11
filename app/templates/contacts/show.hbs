@@ -18,22 +18,20 @@
   </tr>
   </thead>
   <tbody>
-  {{#each model as |contact| }}
-    <tr>
-      <td>{{contact.id}}</td>
-      <td>{{contact.name}}</td>
-      <td>{{contact.surname}}</td>
-      <td>{{contact.phone}}</td>
-      <td>{{contact.email}}</td>
-      <td>{{contact.web}}</td>
-      <td>{{contact.city}}</td>
-      <td>{{contact.address}}</td>
-      <td>{{contact.country.title}}</td>
-      <td>
-        <button type="button" class="btn btn-danger" {{action 'deleteContact' country}}>Delete</button>
-      </td>
-    </tr>
-  {{/each}}
+  <tr>
+    <td>{{model.contact.id}}</td>
+    <td>{{model.contact.name}}</td>
+    <td>{{model.contact.surname}}</td>
+    <td>{{model.contact.phone}}</td>
+    <td>{{model.contact.email}}</td>
+    <td>{{model.contact.web}}</td>
+    <td>{{model.contact.city}}</td>
+    <td>{{model.contact.address}}</td>
+    <td>{{model.contact.country.title}}</td>
+    <td>
+      <button type="button" class="btn btn-danger" {{action 'deleteContact' country}}>Delete</button>
+    </td>
+  </tr>
 
   </tbody>
 </table>

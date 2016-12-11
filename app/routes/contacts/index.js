@@ -8,11 +8,11 @@ export default Ember.Route.extend({
   actions: {
 
     redirectToEditContact(contact){
-      this.transitionTo('contacts.edit', contact);
+      this.transitionTo('contacts.edit', contact.id);
     },
 
     redirectToShowContact(contact){
-      this.transitionTo('contacts.show', contact);
+      this.transitionTo('contacts.show', contact.id);
     },
 
     deleteContact(contact) {

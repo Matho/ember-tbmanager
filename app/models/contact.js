@@ -8,7 +8,6 @@ export default DS.Model.extend({
   web: DS.attr('string'),
   city: DS.attr('string'),
   address: DS.attr('string'),
-  countryId: DS.attr('number'),
 
   country: DS.belongsTo('country'),
 
@@ -23,7 +22,7 @@ export default DS.Model.extend({
   isValidWeb: Ember.computed.notEmpty('web'),
   isValidCity: Ember.computed.notEmpty('city'),
   isValidAddress: Ember.computed.notEmpty('address'),
-  isValidCountry: Ember.computed.notEmpty('countryId'),
+  isValidCountry: Ember.computed.notEmpty('country.title'),
 
-  isValid: Ember.computed.and('isValidName', 'isValidSurname', 'isValidPhone', 'isValidEmail', 'isValidWeb', 'isValidCity', 'isValidAddress', 'isValidCountry' ),
+  isValid: Ember.computed.and('isValidName', 'isValidSurname', 'isValidPhone', 'isValidEmail', 'isValidWeb', 'isValidCity', 'isValidAddress', 'isValidCountry'),
 });

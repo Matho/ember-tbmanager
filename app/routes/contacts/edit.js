@@ -8,11 +8,29 @@ export default Ember.Route.extend({
   setupController: function (controller, model) {
     this._super(controller, model);
 
-    controller.set('title', 'Edit a new country');
+    controller.set('title', 'Edit a new contact');
   },
 
   renderTemplate() {
-    this.render('admin/countries/form');
+    this.render('contacts/form');
   },
+
+  actions: {
+    willTransition(transition) {
+
+      let model = this.controller.get('model');
+
+      if (model.get('hasDirtyAttributes')) {
+        let confirmation = confirm("Your changes haven't saved yet. Would you like to leave this form?");
+
+        if (confirmation) {
+          model.rollbackAttributes();
+        } else {
+          transition.abort();
+        }
+      }
+    }
+
+  }
 
 });

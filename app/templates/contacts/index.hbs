@@ -20,7 +20,7 @@
   <tbody>
   {{#each model as |contact| }}
     <tr>
-      <td></td>
+      <td>{{contact.id}}</td>
       <td>{{contact.name}}</td>
       <td>{{contact.surname}}</td>
       <td>{{contact.phone}}</td>
@@ -28,8 +28,10 @@
       <td>{{contact.phone}}</td>
       <td>{{contact.city}}</td>
       <td>{{contact.address}}</td>
-      <td>{{contact.country.title}}</td>
+      <td>{{contact.country.title }}</td>
       <td>
+        <button type="button" class="btn" {{action 'redirectToShowContact' contact}}>Show</button>
+        <button type="button" class="btn" {{action 'redirectToEditContact' contact}} >Edit</button>
         <button type="button" class="btn btn-danger" {{action 'deleteContact' contact}}>Delete</button>
       </td>
     </tr>

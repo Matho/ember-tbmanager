@@ -12,7 +12,7 @@ export default Ember.Route.extend({
   setupController: function (controller, model) {
     this._super(controller, model);
 
-    controller.set('title', 'Create a new contact');;
+    controller.set('title', 'Create a new contact');
   },
 
   renderTemplate() {
@@ -21,9 +21,9 @@ export default Ember.Route.extend({
 
 
   actions: {
-    selectOnchangeCountry(countryId){
-      console.log('v routess....');
-      this.controller.get('model').contact.set('countryId', countryId);
+    selectOnchangeCountry(country){
+      let countryFromDb = this.get('store').peekRecord('country', country);
+      this.controller.get('model').contact.set('country', countryFromDb);
     },
 
     saveContact(newContact) {

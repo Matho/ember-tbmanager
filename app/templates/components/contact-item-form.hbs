@@ -59,13 +59,7 @@
   <div class="form-group has-feedback {{if item.isValidCountry 'has-success'}}">
     <label class="col-sm-2 control-label">Country*</label>
     <div class="col-sm-10">
-
-      <select name="country" class="form-control" onchange={{action "selectCountry" value="target.value"  }}>
-        <option value="">-- vyberte --</option>
-        {{#each countries as |country|}}
-          <option value="{{country.id}}"  selected={{eq item.countryId country.id}} >{{country.title}}</option>
-        {{/each}}
-      </select>
+      {{matho-selectbox item_values=countries item=item onchangeItemValueAction=onchangeItemValueAction}}
     </div>
   </div>
 

@@ -5,7 +5,7 @@
 <table class="table table-bordered table-striped">
   <thead>
   <tr>
-    <th class="sortable" {{action 'sortBy' 'id'}}>ID</th>
+    <th class="sortable" {{action 'sortBy' 'id'}}>ID           {{if (eq sortBy "id")  sortDir  }}</th>
     <th class="sortable" {{action 'sortBy' 'name'}}>Name       {{if (eq sortBy "name")  sortDir  }}</th>
     <th class="sortable" {{action 'sortBy' 'surname'}}>Surname {{if (eq sortBy "surname")  sortDir  }}</th>
     <th class="sortable" {{action 'sortBy' 'phone'}} >Phone    {{if (eq sortBy "phone")  sortDir  }} </th>

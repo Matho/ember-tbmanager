@@ -23,7 +23,7 @@ export default DS.Model.extend({
   isValidWeb: Ember.computed.notEmpty('web'),
   isValidCity: Ember.computed.notEmpty('city'),
   isValidAddress: Ember.computed.notEmpty('address'),
-  isValidCountry: Ember.computed.notEmpty('country.title'),
+  isValidCountry: Ember.computed.notEmpty('countryId'),
 
   isValid: Ember.computed.and('isValidName', 'isValidSurname', 'isValidPhone', 'isValidEmail', 'isValidWeb', 'isValidCity', 'isValidAddress', 'isValidCountry' ),
 });

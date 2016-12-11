@@ -1,0 +1,56 @@
+<div id="validationErrorWrapper">
+  <div class="validationErrors">
+    {{#unless item.isValid}}
+      <h3>Formulár obsahuje tieto chyby:</h3>
+    {{/unless}}
+
+
+    {{#unless item.isValidName}}
+      <div >
+        Meno musí obsahovať aspoň 2 znaky
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidSurname}}
+      <div >
+        Priezvisko musí obsahovať aspoň 2 znaky
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidPhone}}
+      <div >
+        Telefón musí byť vyplnený
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidEmail}}
+      <div >
+        Email musí byť v správnom tvare
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidWeb}}
+      <div >
+        Web musí byť vyplnený
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidCity}}
+      <div >
+        Mesto musí byť vyplnené
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidAddress}}
+      <div >
+        Adresa musí byť vyplnená
+      </div>
+    {{/unless}}
+
+    {{#unless item.isValidCountry}}
+      <div >
+        Krajina musí byť zvolená
+      </div>
+    {{/unless}}
+  </div>
+</div>

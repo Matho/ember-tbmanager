@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       contact: this.store.createRecord('contact'),
       countries: this.store.findAll('country')
-    });
+    })
   },
 
 
@@ -21,6 +21,10 @@ export default Ember.Route.extend({
 
 
   actions: {
+    selectOnchangeCountry(countryId){
+      console.log('v routess....');
+      this.controller.get('model').contact.set('countryId', countryId);
+    },
 
     saveContact(newContact) {
       newContact.save().then(() => this.transitionTo('contacts'));

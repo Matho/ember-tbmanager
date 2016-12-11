@@ -18,7 +18,7 @@
   </tr>
   </thead>
   <tbody>
-  {{#each sortedContacts as |contact| }}
+  {{#each pagedContent as |contact| }}
     <tr>
       <td>{{contact.id}}</td>
       <td>{{contact.name}}</td>
@@ -39,3 +39,5 @@
 
   </tbody>
 </table>
+
+{{page-numbers content=pagedContent}}

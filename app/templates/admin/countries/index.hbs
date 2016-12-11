@@ -12,7 +12,7 @@
   </tr>
   </thead>
   <tbody>
-  {{#each sortedCountries as |country| }}
+  {{#each pagedContent as |country| }}
     <tr>
       <td>{{country.id}}</td>
       <td>{{country.title}}</td>
@@ -28,3 +28,5 @@
 
   </tbody>
 </table>
+
+{{page-numbers content=pagedContent}}

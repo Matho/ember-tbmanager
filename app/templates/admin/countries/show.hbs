@@ -12,16 +12,15 @@
   </tr>
   </thead>
   <tbody>
-  {{#each model as |country| }}
-    <tr>
-      <td>{{country.id}}</td>
-      <td>{{country.title}}</td>
-      <td>{{country.code}}</td>
-      <td>
-        <button type="button" class="btn btn-danger" {{action 'deleteCountry' country}}>Delete</button>
-      </td>
-    </tr>
-  {{/each}}
+
+  <tr>
+    <td>{{model.id}}</td>
+    <td>{{model.title}}</td>
+    <td>{{model.code}}</td>
+    <td>
+      <button type="button" class="btn btn-danger" {{action 'deleteCountry' country}}>Delete</button>
+    </td>
+  </tr>
 
   </tbody>
 </table>

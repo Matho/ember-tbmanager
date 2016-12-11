@@ -5,20 +5,20 @@
 <table class="table table-bordered table-striped">
   <thead>
   <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Surname</th>
-    <th>Phone</th>
-    <th>E-mail</th>
-    <th>Web</th>
-    <th>City</th>
-    <th>Address</th>
-    <th>Country</th>
+    <th class="sortable" {{action 'sortBy' 'id'}}>ID</th>
+    <th class="sortable" {{action 'sortBy' 'name'}}>Name       {{if (eq sortBy "name")  sortDir  }}</th>
+    <th class="sortable" {{action 'sortBy' 'surname'}}>Surname {{if (eq sortBy "surname")  sortDir  }}</th>
+    <th class="sortable" {{action 'sortBy' 'phone'}} >Phone    {{if (eq sortBy "phone")  sortDir  }} </th>
+    <th class="sortable" {{action 'sortBy' 'email'}}>E-mail    {{if (eq sortBy "email")  sortDir  }} </th>
+    <th class="sortable" {{action 'sortBy' 'web'}}>Web         {{if (eq sortBy "web")  sortDir  }}</th>
+    <th class="sortable" {{action 'sortBy' 'city'}} >City      {{if (eq sortBy "city")  sortDir  }}</th>
+    <th class="sortable" {{action 'sortBy' 'address'}} >Address {{if (eq sortBy "address")  sortDir  }}</th>
+    <th>Country </th>
     <th>Actions</th>
   </tr>
   </thead>
   <tbody>
-  {{#each model as |contact| }}
+  {{#each sortedContacts as |contact| }}
     <tr>
       <td>{{contact.id}}</td>
       <td>{{contact.name}}</td>

@@ -22,7 +22,7 @@ export default Ember.Route.extend({
 
   actions: {
     selectOnchangeCountry(country){
-      let countryFromDb = this.get('store').peekRecord('country', country);
+      let countryFromDb = this.get('store').findRecord('country', country);
       this.controller.get('model').contact.set('country', countryFromDb);
     },
 

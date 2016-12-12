@@ -1,8 +1,29 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(){
-    return this.store.findAll('country');
+  queryParams: {
+    search: {
+      refreshModel: true
+    }
+  },
+
+
+  model(params){
+
+    if (params.search == ""){
+      return this.store.findAll('country');
+    }
+    else {
+      var that = this;
+
+      return new Ember.RSVP.Promise(function(resolve) {
+        that.store.findAll('country').then(function(countries) {
+          resolve(countries.filterBy(params.sortBy, params.search));
+        });
+      });
+    }
+
+
   },
 
 

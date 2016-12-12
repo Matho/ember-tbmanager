@@ -10,7 +10,7 @@ export default Ember.Route.extend({
 
   model(params){
 
-    if (params.search == ""){
+    if (params.search === ""){
       return this.store.findAll('country');
     }
     else {

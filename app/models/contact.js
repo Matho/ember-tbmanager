@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
@@ -8,6 +9,7 @@ export default DS.Model.extend({
   web: DS.attr('string'),
   city: DS.attr('string'),
   address: DS.attr('string'),
+
 
   country: DS.belongsTo('country'),
 

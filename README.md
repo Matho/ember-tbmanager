@@ -43,6 +43,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 Specify what it takes to deploy your app.
 
+### TODO
+- search by regexp match (ILIKE search)
+- add api-pagination and api search instead of local modes (sorting and page-counting on client
+
+
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)

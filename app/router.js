@@ -20,6 +20,19 @@ Router.map(function() {
       this.route('show', {path: '/:country_id'});
     });
   });
+
+  this.route('images', function() {
+    this.route('upload');
+    this.route('show', {path: '/:image_id'});
+
+  });
+  this.route('login');
+  this.route('signup');
+
+  this.route('users', function() {
+    this.route('show', {path: '/:user_id'});
+  });
+  this.route('dashboard');
 });
 
 export default Router;

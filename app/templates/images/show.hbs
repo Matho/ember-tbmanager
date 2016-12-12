@@ -1,0 +1,28 @@
+<h1>Images</h1>
+
+{{#link-to "images.upload"}}Upload{{/link-to}}<br>
+
+
+
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th >ID</th>
+    <th >File name</th>
+    <th >File name orig path</th>
+    <th >File name small path</th>
+    <th >Dimmensions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{model.id}}</td>
+    <td>{{model.file_name}}</td>
+    <td>{{model.file_name_orig_path}}</td>
+    <td>{{model.file_name_small_path}}</td>
+    <td>{{model.dimmensions}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<a target="_blank" href="{{model.file_name_orig_path}}"><img src="{{model.file_name_small_path}}"></a>

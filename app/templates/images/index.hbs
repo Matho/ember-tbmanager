@@ -1,0 +1,36 @@
+<h1>Images#index</h1>
+
+
+{{#link-to "images.upload"}}Create{{/link-to}}
+
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th >ID</th>
+    <th >File name</th>
+    <th >File name orig path</th>
+    <th >File name small path</th>
+    <th >Dimmensions</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each pagedContent as |image| }}
+    <tr>
+      <td>{{image.id}}</td>
+      <td>{{image.file_name}}</td>
+      <td>{{image.file_name_orig_path}}</td>
+      <td>{{image.file_name_small_path}}</td>
+      <td>{{image.dimmensions}}</td>
+      <td>
+        <button type="button" class="btn" {{action 'redirectToShowImage' image}}>Show</button>
+        <button type="button" class="btn btn-danger" {{action 'deleteImage' image}}>Delete</button>
+
+      </td>
+    </tr>
+  {{/each}}
+
+  </tbody>
+</table>
+
+{{page-numbers content=pagedContent}}

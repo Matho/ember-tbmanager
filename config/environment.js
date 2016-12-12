@@ -12,10 +12,14 @@ module.exports = function(environment) {
       databaseURL: 'https://tbmanager-2f559.firebaseio.com',
       storageBucket: 'tbmanager-2f559.appspot.com',
     },
+    'ember-simple-auth': {
+      routeAfterAuthentication: 'dashboard',
+      routeIfAlreadyAuthenticated: 'dashboard'
+    },
     contentSecurityPolicy: {
       'script-src': "'self' 'unsafe-eval' apis.google.com",
       'frame-src': "'self' https://*.firebaseapp.com",
-      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+      'connect-src': "*"
     },
 
     EmberENV: {
@@ -35,8 +39,13 @@ module.exports = function(environment) {
     }
   };
 
+
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
+    ENV.API_HOST = "http://localhost:3000";
+    ENV.API_IMG_PATH = "/uploads";
+    ENV.API_IMG_THUMB_PATH = "/uploads/small";
     ENV.APP.LOG_ACTIVE_GENERATION = true;
     ENV.APP.LOG_TRANSITIONS = true;
     ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
@@ -46,6 +55,7 @@ module.exports = function(environment) {
   if (environment === 'test') {
     // Testem prefers this...
     ENV.locationType = 'none';
+    ENV.API_HOST = "http://localhost:3000";
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;

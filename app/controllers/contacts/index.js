@@ -3,7 +3,9 @@ import pagedArray from 'ember-cli-pagination/computed/paged-array';
 
 export default Ember.Controller.extend({
 
-  queryParams: ['sortBy', 'sortDir',"page", "perPage"],
+  queryParams: ['sortBy', 'sortDir',"page", "perPage", "search"],
+
+  search: "",
 
   // Using for sortBy direction
   id: false,

@@ -2,15 +2,28 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   queryParams: {
-    numberOfRecords: {
+    search: {
       refreshModel: true
     }
   },
 
 
-  model(){
-    return this.store.findAll('contact');
+  model(params){
+
+    if (params.search == ""){
+      return this.store.findAll('contact');
+    }
+    else {
+      var that = this;
+
+      return new Ember.RSVP.Promise(function(resolve) {
+        that.store.findAll('contact').then(function(countries) {
+          resolve(countries.filterBy(params.sortBy, params.search));
+        });
+      });
+    }
   },
+
 
   actions: {
     redirectToEditContact(contact){

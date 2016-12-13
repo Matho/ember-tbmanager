@@ -1,7 +1,24 @@
 # tbmanager
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is my first ember application created for learning purpose.   
+
+## Features
+* CRUD contacts
+* CRUD images
+* CRUD countries
+* file uploading (html5 runtime)
+* login
+* user registration
+* powered by ruby on rails api
+* form realtime validation
+* searching (local mode)
+* pagination (local mode)
+* sortable tables (local mode)
+* screenshots of app in screenshots folder
+
+## Bugs
+* problems with selectbox in contacts
+
 
 ## Prerequisites
 
@@ -22,7 +39,8 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember serve`
+* ember server --proxy http://localhost:3000
+* bin/rails server --binding 0.0.0.0 (ruby on rails api project)
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
@@ -42,11 +60,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 ### Deploying
 
 Specify what it takes to deploy your app.
-
-### TODO
-- search by regexp match (ILIKE search)
-- add api-pagination and api search instead of local modes (sorting and page-counting on client
-
 
 ## Further Reading / Useful Links
 

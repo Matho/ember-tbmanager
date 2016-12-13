@@ -1,20 +1,46 @@
-<form {{action "submit" on="submit"}}>
+<div id="validationErrorWrapper">
+  <div class="validationErrors">
+    {{#if errorMessage}}
+      {{errorMessage}}
+    {{/if}}
+  </div>
+</div>
 
-  <label for="name">Name</label>
-{{input value=user.name placeholder="enter name"}}
-
-  <label for="email">Email</label>
-{{input value=user.email placeholder="enter email"}}
-
-  <label for="password">Password</label>
-{{input value=user.password type="password" placeholder="enter password"}}
-
-  <label for="passwordConfirmation">Password Confirmation</label>
-{{input value=user.passwordConfirmation type="password" placeholder="enter password again"}}
-
-  <button type="submit">Login</button>
+  <form {{action "submit" on="submit"}}>
+  <div class="form-horizontal">
+    <div class="form-group has-feedback ">
+      <label class="col-sm-2 control-label">Name*</label>
+      <div class="col-sm-10">
+        {{input value=user.name placeholder="Enter name" class="form-control"}}
+        {{#if item.isValidName}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+      </div>
+    </div>
+    <div class="form-group has-feedback ">
+      <label class="col-sm-2 control-label">Email*</label>
+      <div class="col-sm-10">
+        {{input value=user.email type="text" placeholder="Enter email" class="form-control"}}
+        {{#if item.isValidEmail}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+      </div>
+    </div>
+    <div class="form-group has-feedback ">
+      <label class="col-sm-2 control-label">Password*</label>
+      <div class="col-sm-10">
+        {{input value=user.password type="password" placeholder="Enter password" class="form-control"}}
+        {{#if item.isValidPassword}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+      </div>
+    </div>
+    <div class="form-group has-feedback ">
+      <label class="col-sm-2 control-label">Password Confirmation*</label>
+      <div class="col-sm-10">
+        {{input value=user.passwordConfirmation type="password" placeholder="Enter password again" class="form-control"}}
+        {{#if item.isValidPasswordConfirmation}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+      </div>
+    </div>
+    <div class="form-group has-feedback">
+      <label class="col-sm-2 control-label"></label>
+      <div class="col-sm-10">
+        <button type="submit">Login</button>
+      </div>
+    </div>
+  </div>
 </form>
-
-{{#if errorMessage}}
-  {{errorMessage}}
-{{/if}}

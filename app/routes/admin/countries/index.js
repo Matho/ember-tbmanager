@@ -27,6 +27,9 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
 
 
   actions: {
+    redirectToNewCountry(){
+      this.transitionTo('admin.countries.new');
+    },
 
     redirectToEditCountry(country){
       this.transitionTo('admin.countries.edit', country.id);

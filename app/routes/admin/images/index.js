@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(AuthenticatedRouteMixin,{
   model(){
     return this.store.findAll('image');
 
@@ -8,8 +9,12 @@ export default Ember.Route.extend({
 
 
   actions: {
+    redirectToCreateImage(){
+      this.transitionTo('admin.images.upload');
+    },
+
     redirectToShowImage(image){
-      this.transitionTo('images.show', image.id);
+      this.transitionTo('admin.images.show', image.id);
     },
 
     deleteImage(image) {

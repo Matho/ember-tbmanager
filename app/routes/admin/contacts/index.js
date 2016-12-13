@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend(UnauthenticatedRouteMixin,{
+export default Ember.Route.extend(AuthenticatedRouteMixin,{
   queryParams: {
     search: {
       refreshModel: true
@@ -27,12 +27,17 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin,{
 
 
   actions: {
+
+    redirectToNewContact(){
+      this.transitionTo('admin.contacts.new');
+    },
+
     redirectToEditContact(contact){
-      this.transitionTo('contacts.edit', contact.id);
+      this.transitionTo('admin.contacts.edit', contact.id);
     },
 
     redirectToShowContact(contact){
-      this.transitionTo('contacts.show', contact.id);
+      this.transitionTo('admin.contacts.show', contact.id);
     },
 
     deleteContact(contact) {

@@ -1,10 +1,11 @@
 import Ember from "ember";
 import ENV from 'tbmanager/config/environment';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
 const get = Ember.get;
 const set = Ember.set;
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(AuthenticatedRouteMixin,{
 
   actions: {
     uploadImage: function (file) {
@@ -29,7 +30,7 @@ export default Ember.Route.extend({
         image.save().then(function(data){
           console.log("image.id" + data.id);
 
-          that.transitionTo('images.show', data.id);
+          that.transitionTo('admin.images.show', data.id);
           return true;
         });
 

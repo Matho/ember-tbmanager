@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend(UnauthenticatedRouteMixin,{
+export default Ember.Route.extend(AuthenticatedRouteMixin,{
   model(){
     return Ember.RSVP.hash({
       contact: this.store.createRecord('contact'),
@@ -17,7 +17,7 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin,{
   },
 
   renderTemplate() {
-    this.render('contacts/form');
+    this.render('admin/contacts/form');
   },
 
 

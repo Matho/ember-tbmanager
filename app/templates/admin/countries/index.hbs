@@ -1,34 +1,35 @@
-<h1>Admin/countries#index</h1>
+<h1>Countries</h1>
 
-{{input value=search}}<br>
+{{input value=search placeholder="Type your search query ... "}}<br>
 
-{{#link-to "admin.countries.new"}}Create{{/link-to}}
-
-<table class="table table-bordered table-striped">
-  <thead>
-  <tr>
-    <th class="sortable" {{action 'sortBy' 'id'}}>ID           {{if (eq sortBy "id")  sortDir  }}</th>
-    <th class="sortable" {{action 'sortBy' 'title'}}>Title   {{if (eq sortBy "title")  sortDir  }}</th>
-    <th class="sortable" {{action 'sortBy' 'code'}}>Code       {{if (eq sortBy "code")  sortDir  }}</th>
-    <th>Actions</th>
-  </tr>
-  </thead>
-  <tbody>
-  {{#each pagedContent as |country| }}
+<button type="button" class="btn" {{action 'redirectToNewCountry' }}>Create</button>
+{{#if pagedContent}}
+  <table class="table table-bordered table-striped">
+    <thead>
     <tr>
-      <td>{{country.id}}</td>
-      <td>{{country.title}}</td>
-      <td>{{country.code}}</td>
-      <td>
-        <button type="button" class="btn" {{action 'redirectToShowCountry' country}}>Show</button>
-        <button type="button" class="btn" {{action 'redirectToEditCountry' country}} >Edit</button>
-        <button type="button" class="btn btn-danger" {{action 'deleteCountry' country}}>Delete</button>
-
-      </td>
+      <th class="sortable" {{action 'sortBy' 'id'}}>ID           {{if (eq sortBy "id")  sortDir  }}</th>
+      <th class="sortable" {{action 'sortBy' 'title'}}>Title   {{if (eq sortBy "title")  sortDir  }}</th>
+      <th class="sortable" {{action 'sortBy' 'code'}}>Code       {{if (eq sortBy "code")  sortDir  }}</th>
+      <th>Actions</th>
     </tr>
-  {{/each}}
+    </thead>
+    <tbody>
+    {{#each pagedContent as |country| }}
+      <tr>
+        <td>{{country.id}}</td>
+        <td>{{country.title}}</td>
+        <td>{{country.code}}</td>
+        <td>
+          <button type="button" class="btn" {{action 'redirectToShowCountry' country}}>Show</button>
+          <button type="button" class="btn" {{action 'redirectToEditCountry' country}} >Edit</button>
+          <button type="button" class="btn btn-danger" {{action 'deleteCountry' country}}>Delete</button>
 
-  </tbody>
-</table>
+        </td>
+      </tr>
+    {{/each}}
 
-{{page-numbers content=pagedContent}}
+    </tbody>
+  </table>
+
+  {{page-numbers content=pagedContent}}
+{{/if}}

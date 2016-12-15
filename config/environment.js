@@ -22,6 +22,11 @@ module.exports = function(environment) {
       'connect-src': "*"
     },
 
+    // Disable mirage by default
+    'ember-cli-mirage': {
+      enabled: false
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -55,7 +60,13 @@ module.exports = function(environment) {
   if (environment === 'test') {
     // Testem prefers this...
     ENV.locationType = 'none';
-    ENV.API_HOST = "http://localhost:3000";
+    // remove host address for tests
+    // so the paths display omits the url
+    ENV.API_HOST = "";
+    // Turn on mirage only for testing
+    ENV['ember-cli-mirage'] = {
+      enabled: true
+    };
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;

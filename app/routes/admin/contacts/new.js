@@ -6,7 +6,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
     return Ember.RSVP.hash({
       contact: this.store.createRecord('contact'),
       countries: this.store.findAll('country')
-    })
+    });
   },
 
 

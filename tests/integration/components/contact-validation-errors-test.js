@@ -12,7 +12,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{contact-validation-errors}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$('h3').text().trim(), 'Formulár obsahuje tieto chyby:');
 
   // Template block usage:
   this.render(hbs`
@@ -21,5 +21,5 @@ test('it renders', function(assert) {
     {{/contact-validation-errors}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('h3').text().trim(), 'Formulár obsahuje tieto chyby:');
 });

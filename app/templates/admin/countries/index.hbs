@@ -4,7 +4,7 @@
 
 <button type="button" class="btn" {{action 'redirectToNewCountry' }}>Create</button>
 {{#if pagedContent}}
-  <table class="table table-bordered table-striped">
+  <table class="table countries table-bordered table-striped">
     <thead>
     <tr>
       <th class="sortable" {{action 'sortBy' 'id'}}>ID           {{if (eq sortBy "id")  sortDir  }}</th>

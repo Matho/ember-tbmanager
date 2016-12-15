@@ -12,7 +12,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{signup-form}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$('label.password_confirmation').text().trim(), 'Password Confirmation*');
 
   // Template block usage:
   this.render(hbs`
@@ -21,5 +21,5 @@ test('it renders', function(assert) {
     {{/signup-form}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('label.password_confirmation').text().trim(), 'Password Confirmation*');
 });

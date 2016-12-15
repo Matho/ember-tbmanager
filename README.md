@@ -15,9 +15,22 @@ This is my first ember application created for learning purpose.
 * pagination (local mode)
 * sortable tables (local mode)
 * screenshots of app in screenshots folder
+* acceptance tests via mirage
 
 ## Bugs
 * problems with selectbox in contacts
+
+## Thanks to 
+App was built with this tutorials. Thank you, guys!
+* http://ryanlabouve.com/ember-blog-with-jwt-and-esa/
+* http://ryanlabouve.com/ember-blog-with-jwt-and-esa-2/
+* http://yoember.com/#lesson-1
+* https://docs.npmjs.com/getting-started/installing-npm-packages-locally
+* https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-2-change-npms-default-directory-to-another-directory
+* https://balinterdi.com/2015/08/29/how-to-do-a-select-dropdown-in-ember-20.html
+* http://www.thegreatcodeadventure.com/building-user-registration-with-ember-simple-auth/
+* https://emberigniter.com/modern-bridge-ember-and-rails-5-with-json-api/
+
 
 
 ## Prerequisites
